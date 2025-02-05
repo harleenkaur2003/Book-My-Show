@@ -1,0 +1,37 @@
+.container{
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px 30px 0px 30px;
+    background-color: #f0eaea;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow:5px  5px 5px rgba(199,207,224,0.6);
+}
+.select_movie_container{
+    flex-grow: 1;
+}
+.BN-btn{
+    padding: 10px;
+    border: none;
+    margin-top: 20px;
+    left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    background-color:rgb(238,239,241) ;
+    border: 2px solid rgb(10,10,10);
+    position: relative;
+
+}
+.BN-btn:hover{
+    background-color: rgba(255,0,55,0.664);
+    color: #fff;
+}
+.wrapper{
+    display: flex;
+    flex-grow: 0;
+    overflow: visible;
+}
