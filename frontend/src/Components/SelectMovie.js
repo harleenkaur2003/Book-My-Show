@@ -1,6 +1,8 @@
 import React from 'react'
 import RadioComponent from './RadioComponent'
 import { movie } from '../data'
+import '../css/SelectMovie.css'
+
 
 const SelectMovie = () => {
   return (
