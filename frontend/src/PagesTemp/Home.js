@@ -1,9 +1,9 @@
-import LastBookingDetail from "../Components/LastBookingDetails";
-import SelectMovie from "../Components/SelectMovie";
-import SelectSeats from "../Components/SelectSeats";
-import TimeShedule from "../Components/TimeShedule";
-import Modal from "../Components/ModalComponent";
-import "../css/Home";
+import LastBookingDetail from "../ComponentsTemp/LastBookingDetails";
+import SelectMovie from "../ComponentsTemp/SelectMovie";
+import SelectSeats from "../ComponentsTemp/SelectSeats";
+import TimeShedule from "../ComponentsTemp/TimeSchedule";
+import Modal from "../ComponentsTemp/ModalComponent";
+import "../css/Home.css";
 import BsContext from "../contextTemp/BsContext";
 import { useContext } from "react";
 

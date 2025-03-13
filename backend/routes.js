@@ -4,10 +4,17 @@ const Ticket=require("./schema");
 const cors= require("cors")
 const app= express()
 
-router.use(express.json())
-router.use(cors())
+const corsOptions = {
+    origin: 'http://localhost:8080/api/booking',  // Only allow this domain
+    methods: 'GET,POST',            // Allow these HTTP methods
+    allowedHeaders: 'Content-Type', // Allow these headers
+  };
 
-router.post("booking",async(req,res)=>{
+router.use(express.json())
+router.use(cors(corsOptions));
+
+
+router.post("/booking",async(req,res)=>{
     const {movie,slot,seats}= req.body
 
      try{
@@ -42,3 +49,5 @@ router.get("/booking",async(req,res)=>{
         })
     }
 })
+
+module.exports= router;

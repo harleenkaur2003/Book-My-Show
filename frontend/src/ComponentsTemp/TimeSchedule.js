@@ -1,6 +1,8 @@
-import React from 'react'
-import { timings } from '../data'
+import React, { useContext } from 'react'
+import { slots } from '../data'
+import RadioComponent from './RadioComponent'
 import '../css/TimeSchedule.css'
+import BsContext from '../contextTemp/BsContext'
 
 const TimeSchedule = () => {
   const context= useContext(BsContext);
@@ -18,7 +20,7 @@ const TimeSchedule = () => {
     <div className='Slot_container'>
       <h1 className='TS_heading'>Select a Schedule</h1>
       <div className='TS_main_conatiner'>
-        {timings.map((el,index)=>{
+        {slots.map((el,index)=>{
             return <RadioComponent text={el} key={index} data={time} changeSelection={handleChangeItem}/>
         })}
       </div>
