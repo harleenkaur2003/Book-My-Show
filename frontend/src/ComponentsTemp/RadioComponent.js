@@ -4,7 +4,8 @@ import '../css/RadioComponent.css'
 const RadioComponent = ({text,changeSelection,data}) => {
   const handleChecked=(val)=>{
     changeSelection(val);
-  }
+  };
+  
   return (
     <div 
     name={text} 

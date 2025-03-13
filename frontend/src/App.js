@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './PagesTemp/Home.js'
+import Home from './PagesTemp/Home'
 import BsState from './contextTemp/BsState'
 
 const App = () => {

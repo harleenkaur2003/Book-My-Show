@@ -27,7 +27,7 @@ const SeatInput = ({
   }
   return (
     <div>
-      <div className={`form-check-label${
+      <div className={`form-check-label seats${
         seat === text ? "active":"inactive"
       }`}
       id={`${index}text`}

@@ -7,9 +7,12 @@ const TicketSchema = new mongoose.Schema({
     A1: { type: Number },
     A2: { type: Number },
     A3: { type: Number },
-    A4: { type: Number },
-    D1: { type: Number },
-    D2: { type: Number },
+    B1: { type: Number },
+    B2: { type: Number },
+    B3: { type: Number },
+    C1: { type: Number },
+    C2: { type: Number },
+    C3: { type: Number }
   },
 });
 // Registering the schema with the Mongoose model.

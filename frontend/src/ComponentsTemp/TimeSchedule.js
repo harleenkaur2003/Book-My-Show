@@ -9,7 +9,7 @@ const TimeSchedule = () => {
 
   const {time,changeTime}=context
 
-  const handleChangeItem=(val)=>{
+  const handleChangeTime=(val)=>{
     changeTime(val) 
 
     window.localStorage.setItem("slot",val)
@@ -21,7 +21,7 @@ const TimeSchedule = () => {
       <h1 className='TS_heading'>Select a Schedule</h1>
       <div className='TS_main_conatiner'>
         {slots.map((el,index)=>{
-            return <RadioComponent text={el} key={index} data={time} changeSelection={handleChangeItem}/>
+            return <RadioComponent text={el} key={index} data={time} changeSelection={handleChangeTime}/>
         })}
       </div>
     </div>

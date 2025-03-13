@@ -4,7 +4,9 @@ const connectDB = require('./dbConnection')
 const Ticket = require('./schema');
 const cors = require("cors");
 
-app.use(cors());
+app.use(cors({
+    origin:'http://localhost:3000',
+}));
 //Middleware for parsing Json
 app.use(express.json());
 //Connecting to Database
