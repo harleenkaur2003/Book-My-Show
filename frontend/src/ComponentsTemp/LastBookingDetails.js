@@ -12,9 +12,11 @@ const LastBookingDetails = () => {
 
   // Fetch last booking details when the component mounts
   useEffect(() => {
-    handleGetLastBooking(); // Call the API to get last booking details
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    handleGetLastBooking()
+      .catch((error) => {
+        console.error("Error fetching last booking details:", error);
+      });
+  }, [handleGetLastBooking]);
 
   return (
     <div className="last_booking_details_container_main">
@@ -27,7 +29,7 @@ const LastBookingDetails = () => {
               {seats.map((seat, index) => (
                 // Display each seat and its count
                 <li className="seat_value" key={index}>
-                  {seat}: {Number(lastBookingDetails.seats[seat])}
+                  {seat}: {Number(lastBookingDetails.seats?.[seat] ?? 0)}
                 </li>
               ))}
             </ul>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
+import '../css/TimeSchedule.css'
 import { slots } from '../data'
 import RadioComponent from './RadioComponent'
-import '../css/TimeSchedule.css'
 import BsContext from '../contextTemp/BsContext'
 
 const TimeSchedule = () => {
@@ -29,4 +29,4 @@ const TimeSchedule = () => {
   )
 }
 
-export default TimeSchedule
+export default TimeSchedule;

@@ -5,7 +5,6 @@ const BsState = (props) => {
   
   const [errorPopup, setErrorPopup] = useState(false);
 
-  
   const [errorMessage, setErrorMessage] = useState("");
 
   const [time, changeTime] = useState("");
@@ -14,22 +13,23 @@ const BsState = (props) => {
   const [movie, changeMovie] = useState("");
 
   const [noOfSeat, changeNoOfSeats] = useState({
-    A1: "",
-    A2: "",
-    A3: "",
-    B1: "",
-    B2: "",
-    B3: "",
-    C1: "",
-    C2: "",
-    C3: ""
+    A1: 0,
+    A2: 0,
+    A3: 0,
+    B1: 0,
+    B2: 0,
+    B3: 0,
+    C1: 0,
+    C2: 0,
+    C3: 0
   });
+  
 
   const [lastBookingDetails, setLastBookingDetails] = useState(null);
 
   const handlePostBooking = async () => {
     const response = await fetch(
-      `http://localhost:8080/api/booking`,
+      `/api/booking`,
       {
         method: "POST",
         headers: {
@@ -48,15 +48,15 @@ const BsState = (props) => {
       changeTime("");
       changeMovie("");
       changeNoOfSeats({
-        A1: "",
-    A2: "",
-    A3: "",
-    B1: "",
-    B2: "",
-    B3: "",
-    C1: "",
-    C2: "",
-    C3: ""
+        A1: 0,
+        A2: 0,
+        A3: 0,
+        B1: 0,
+        B2: 0,
+        B3: 0,
+        C1: 0,
+        C2: 0,
+        C3: 0
       });
       setLastBookingDetails(data.data);
 
@@ -66,7 +66,7 @@ const BsState = (props) => {
 
   const handleGetLastBooking = async () => {
     const response = await fetch(
-      `http://localhost:8080/api/booking`,
+      `/api/booking`,
       {
         method: "GET",
       }
@@ -78,20 +78,23 @@ const BsState = (props) => {
   };
 
   useEffect(() => {
-    const movie = window.localStorage.getItem("movie");
-    const slot = window.localStorage.getItem("slot");
-    const seats = JSON.parse(window.localStorage.getItem("seats"));
-
-    if(movie){
-      changeMovie(movie);
-    }
-    if(slot){
-      changeTime(slot);
-    }
-    if(seats){
-      changeNoOfSeats(seats);
+    try {
+      const movie = window.localStorage.getItem("movie");
+      const slot = window.localStorage.getItem("slot");
+      const seats = window.localStorage.getItem("seats");
+  
+      if (movie) changeMovie(movie);
+      if (slot) changeTime(slot);
+      
+      if (seats) {
+        changeNoOfSeats(JSON.parse(seats));
+      }
+    } catch (error) {
+      console.error("Error parsing seats from localStorage:", error);
+      window.localStorage.removeItem("seats"); // Clear invalid data
     }
   }, []);
+  
 
   return (
     <BsContext.Provider

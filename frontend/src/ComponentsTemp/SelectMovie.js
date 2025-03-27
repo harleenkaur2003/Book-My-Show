@@ -8,7 +8,7 @@ import BsContext from '../contextTemp/BsContext'
 const SelectMovie = () => {
   const context= useContext(BsContext);
 
-  const {movie,changeMovie}= context;
+  const {movie,changeMovie}= context || {};
 
   const handleChangeMovie =(value)=>{
     changeMovie(value);
@@ -25,7 +25,7 @@ const SelectMovie = () => {
                 text={el} 
                 key={index}
                 changeSelection={handleChangeMovie}
-                data={movie}
+                data={movie || ""} 
                 />
             )
         })

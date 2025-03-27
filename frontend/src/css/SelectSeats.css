@@ -1,12 +1,32 @@
 
-SS_main_container{
+.SS_main_container{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     color: black;
 }
 
-SS_heading{
+.SS_wrapper > h1.SS_heading {
     width: 100%;
     font-size: 22px;
+    color:black;
 }
+/*
+.SS_wrapper > h1.SS_heading {
+    width: 100%;
+    font-size: 22px;
+    color: black; /* Explicitly set color for heading */
+    /*
+  }
+  
+  .SS_main_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .SS_main_container * {
+    color: black; /* Apply color to all elements inside SS_main_container */
+    /*
+  }
+*/

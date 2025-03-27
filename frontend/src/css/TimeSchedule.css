@@ -1,3 +1,4 @@
+/*
 .TS_heading{
     width: 100%;
     font-size: 22px;
@@ -8,5 +9,26 @@
     margin-bottom: 20px;
     justify-content: flex-start;
     flex-wrap: wrap;
+    
+}
+.TS_main_container *{
     color: black;
 }
+*/
+.TS_heading {
+    width: 100%;
+    font-size: 22px;
+    color: black; /* Explicitly set color for heading */
+  }
+  
+  .TS_main_container {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .Slot_container * {
+    color:black ; /* Apply color to all elements inside TS_main_container */
+  }
+  

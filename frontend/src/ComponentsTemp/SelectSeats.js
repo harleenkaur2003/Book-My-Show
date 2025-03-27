@@ -5,7 +5,7 @@ import '../css/SelectSeats.css'
 import BsContext from '../contextTemp/BsContext'
 
 const SelectSeats = () => {
-  const [seat, changeSeats]= useState([]);
+  const [seat, changeSeats]= useState([""]);
   const context= useContext(BsContext);
   const {noOfSeat,changeNoOfSeats}= context;
 

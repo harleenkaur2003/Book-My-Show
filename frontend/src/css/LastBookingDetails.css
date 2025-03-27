@@ -40,10 +40,10 @@
 }
 .slot,.movie{
     margin-bottom: 10px;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 500;
 }
 .slot span,.movie span{
     font-weight: 400;
-    font-size: 16px;
+    font-size: inherit;
 }
