@@ -29,7 +29,7 @@ const BsState = (props) => {
 
   const handlePostBooking = async () => {
     const response = await fetch(
-      `/api/booking`,
+      `https://book-my-show-backend-ujbb.onrender.com/api/booking`,
       {
         method: "POST",
         headers: {
@@ -66,7 +66,7 @@ const BsState = (props) => {
 
   const handleGetLastBooking = async () => {
     const response = await fetch(
-      `/api/booking`,
+      `https://book-my-show-backend-ujbb.onrender.com/api/booking`,
       {
         method: "GET",
       }
