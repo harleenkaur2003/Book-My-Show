@@ -31,5 +31,6 @@ Cinema Book is a movie ticket booking system which  provides a seamless interfac
 2. **Backend API**: Node.js and Express.js handle API requests, managing data and interactions with MongoDB.
 3. **Database Operations**: MongoDB stores and retrieves booking data efficiently.
 
-
+## Live Demo
+Visit the website: https://book-my-show-frontend-ef8d.onrender.com
 
