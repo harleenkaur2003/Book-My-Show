@@ -12,6 +12,10 @@ app.use(express.urlencoded({ extended: false }))
 // creating an api and seperating it.
 
 connectDB();
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 app.use("/api", require("./routes"));
 
 app.listen(8080,()=>{
