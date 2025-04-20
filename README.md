@@ -26,6 +26,10 @@ Cinema Book is a movie ticket booking system which  provides a seamless interfac
 ![Screenshot (272)](https://github.com/user-attachments/assets/0115fe45-b82d-400c-960e-c2c588b8d4d8)
 
 
+![Screenshot (331)](https://github.com/user-attachments/assets/97db0633-0d14-4020-b009-4aa329a02046)
+
+
+
 
 1. **User Interface**: Users interact with the application through a responsive React.js frontend.
 2. **Backend API**: Node.js and Express.js handle API requests, managing data and interactions with MongoDB.
