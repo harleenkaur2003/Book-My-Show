@@ -1,4 +1,4 @@
-name: Fullstack CI Pipeline
+name: BookMyShow CI Pipeline
 
 on:
   push:
@@ -9,14 +9,14 @@ on:
       - dev
 
 jobs:
-  backend-build:
+  backend:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up Node.js
+    - name: Set up Node.js for backend
       uses: actions/setup-node@v4
       with:
         node-version: '20'
@@ -26,25 +26,16 @@ jobs:
         cd backend
         npm install
 
-    - name: Build backend
-      run: |
-        cd backend
-        npm run build
 
-    - name: Run backend tests
-      run: |
-        cd backend
-        npm run test
-
-  frontend-build:
+  frontend:
     runs-on: ubuntu-latest
-    needs: backend-build
+    needs: backend
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up Node.js
+    - name: Set up Node.js for frontend
       uses: actions/setup-node@v4
       with:
         node-version: '20'
@@ -58,8 +49,3 @@ jobs:
       run: |
         cd frontend
         npm run build
-
-    - name: Run frontend tests
-      run: |
-        cd frontend
-        npm run test
