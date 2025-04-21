@@ -1,3 +1,6 @@
+![Build Status](https://img.shields.io/github/actions/workflow/status/harleenkaur2003/Book-My-Show/main.yml?branch=dev)
+
+
 # Cinema Book
 A Real-Time Movie Ticket Booking System
 
