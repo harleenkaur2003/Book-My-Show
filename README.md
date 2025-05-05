@@ -4,6 +4,8 @@
 # Cinema Book
 A Real-Time Movie Ticket Booking System
 
+> Upcoming Enhancements: Dockerize the backend and frontend services for containerized deployment
+
 ## Overview
 Cinema Book is a movie ticket booking system which  provides a seamless interface for browsing movies, selecting schedules, and reserving seats.
 
