@@ -4,7 +4,16 @@ const app = express();
 const connectDB = require('./dbConnection')
 
 
-app.use(cors({ origin: "https://book-my-show-frontend-ef8d.onrender.com", credentials: true }));
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://book-my-show-frontend-ef8d.onrender.com"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 //Middleware for parsing Json
 app.use(express.json());
 

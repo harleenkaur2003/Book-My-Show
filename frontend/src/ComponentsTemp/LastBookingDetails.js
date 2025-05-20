@@ -1,3 +1,4 @@
+
 import React, { useEffect, useContext } from "react";
 import "../css/LastBookingDetails.css"; // Import styling for the component
 import BsContext from "../contextTemp/BsContext"; // Import context for managing state
