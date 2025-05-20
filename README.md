@@ -4,7 +4,6 @@
 # Cinema Book
 A Real-Time Movie Ticket Booking System
 
-> Upcoming Enhancements: Dockerize the backend and frontend services for containerized deployment
 
 ## Overview
 Cinema Book is a movie ticket booking system which  provides a seamless interface for browsing movies, selecting schedules, and reserving seats.
@@ -22,6 +21,13 @@ Cinema Book is a movie ticket booking system which  provides a seamless interfac
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Containerization**: Docker, Docker Compose
+
+
+## Project Structure
+
+- `/frontend` - React.js frontend with Dockerfile and NGINX config  
+- `/backend` - Node.js backend with Dockerfile and Express API  
+- `docker-compose.yml` - Docker Compose file managing multi-container setup 
 
 
 ## Screenshots
@@ -44,3 +50,36 @@ Cinema Book is a movie ticket booking system which  provides a seamless interfac
 ## Live Demo
 Visit the website: https://book-my-show-frontend-ef8d.onrender.com
 
+
+## Running Locally with Docker
+
+### Prerequisites
+- Docker Desktop installed and running  
+- Docker Compose (bundled with Docker Desktop)
+
+### Steps
+
+1. Clone the repo:
+
+ ```bash
+git clone https://github.com/your-username/Book-My-Show.git
+cd Book-My-Show
+```
+
+3. Build and start the containers:
+
+```bash
+docker-compose up --build
+```
+3. Visit the frontend at:
+```bash
+http://localhost:3000
+```
+4. Backend API runs at:
+```bash
+http://localhost:8080
+```
+5. Stop the containers with:
+```bash
+docker-compose down
+```
